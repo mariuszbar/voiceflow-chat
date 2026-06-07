@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Voiceflow</title>
+</head>
+<body>
+
+<h1>Witaj!</h1>
+<p>Chat powinien otworzyć się automatycznie.</p>
+
+<script type="text/javascript">
+(function(d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function() {
+        window.voiceflow.chat.load({
+            verify: {
+                projectID: '6a25b1a62d3a498b7f05f027'
+            },
+            url: 'https://general-runtime.voiceflow.com',
+            voice: {
+                url: 'https://runtime-api.voiceflow.com'
+            }
+        }).then(() => {
+            window.voiceflow.chat.open();
+        });
+    };
+    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+    v.type = "text/javascript";
+    s.parentNode.insertBefore(v, s);
+})(document, 'script');
+</script>
+
+</body>
+</html>
